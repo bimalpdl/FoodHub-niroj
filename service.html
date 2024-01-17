@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servies</title>
+    <style>
+        /*for the main heading*/
+        .heading{
+            text-align: center;
+            font-size: 40px;
+            color: orangered;
+        }
+        /*for the subheading h2*/
+        .heading h2 {
+            color: black;
+        }
+        /*for the service container using CSS Grid*/
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+            grid-gap: 1.5rem;
+            margin-top: 4rem;
+        }
+        /*for individual service boxes*/
+        .s-box {
+            border-radius: 0.5rem;
+            text-align: center;
+            padding: 15px 25px;
+        }
+        /* for box images*/
+        .s-box img{
+            width: 90px; 
+        }
+        /* Styling for service box headings */
+        .s-box h3{
+            margin: 4px 0 10px;
+            color: black;
+            font-size: 1.2rem;
+        }
+        /*for service box paragraphs*/
+        .s-box p{
+            line-height: 1.7rem;
+        }
+        /* hover for service boxes*/
+        .s-box:hover {
+            background-color: skyblue;
+            box-shadow: gray;
+        }
+
+        /*footer css start here*/
+        body {
+      line-height: 1.5;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /*for all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    /* Flexbox styles for the row of the footer content */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* Footer section styles */
+    .footer {
+      background-color: #24262b;
+      padding: 70px 0;
+    }
+
+    /* Individual column styles within the footer */
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    /* Heading styles for each column */
+    .footer-col h4 {
+      font-size: 18px;
+      color: white;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    /* for the underline beneath the column headings */
+    .footer-col h4::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: orangered;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    /*for list items within columns */
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    /*for links within list items */
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: white;
+      text-decoration: none;
+      font-weight: 300;
+      color: #bbbbbb;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect for links */
+    .footer-col ul li a:hover {
+      color: white;
+      padding-left: 8px;
+    }
+
+    /* for social links style */
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+    }
+
+    /* Hover effect for social links */
+    .footer-col .social-links a:hover {
+      color: blue;
+      background-color: #ffffff;
+    }
+
+    /*for the "Service Hours" column */
+    .button {
+      color: #bbbbbb;
+      margin: 2%;
+      padding-left: 40%;
+    }
+
+    /* Responsive Styles */
+    @media(max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media(max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+    
+    </style>
+</head>
+<body>
+    <section class="services" id="services">
+        <!-- Section for Services with a Heading -->
+        <div class="heading">
+            <span><u>Services</u></span>
+            <h2>We provide the best quality food</h2>
+        </div>
+        <!-- Container for Service Boxes -->
+        <div class="service-container">
+            <!-- Individual Service Box 1 -->
+            <div class="s-box">
+                <img src="s1.png">
+                <h3>Order</h3>
+                <p>Effortless Food Ordering, Extraordinary Dining</p>
+            </div>
+            <!-- Individual Service Box 2 -->
+            <div class="s-box">
+                <img src="s2.png">
+                <h3>Shipping</h3>
+                <p>Track Your Tastes with Our Speedy Shipping</p>
+            </div>
+            <!-- Individual Service Box 3 -->
+            <div class="s-box">
+                <img src="s3.png">
+                <h3>Delivered</h3>
+                <p>Fast Food, Faster Delivery</p>
+            </div>
+        </div>
+    </section>
+     <br>
+    <!--footer section start here-->
+    <!-- Footer section-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 - Quick links -->
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Team</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2 - Contact Us -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><a href="#"><i class="fa fa-home"></i>TU Rd 14, Kathmandu</a></li>
+            <li><a href="#"><i class="fa fa-mobile-phone"></i>+977-9816069740, <br>+977-9843625929</a></li>
+            <li><a href="#"><i class="fa fa-envelope"></i>info@FoodHub.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 - Follow Us -->
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 4 - Service Hours -->
+        <div class="footer-col">
+          <h4>Service Hours</h4>
+          <ul>
+            <li><a href="#">10:00 AM to 2:00 AM (NST)</a></li>
+          </ul>
+        </div>
+
+        <!-- for footer button-->
+        <div class="button">
+          <p>&copy; 2024 FoodHub . All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
